@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruit Game</title>
+    <!-- jquiry ui -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        
+        .fruitContainer{
+            width: 90%;
+            height: 60vh;
+            position: relative;
+            background-color: rgb(245, 249, 252);
+            padding: auto;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        #hearts{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #control{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .sbord{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #hearts{
+            width: 150px;
+            height: 40px;
+            background-color: rgb(71, 68, 68); 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            display: none;
+        }
+        .img{
+            width: 50px;
+            height: 50px;
+        }
+        .fruit{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0%;
+            display: none;
+        }
+        #gameOver{
+            width: 80%;
+            height: 70%;
+            background-color: rgb(114, 231, 172);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: rgb(255, 115, 0);
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" data-theme="b">
+        <div role="main" class="ui-content">
+            <div class="sbord">
+                <a class="ui-btn ui-btn-inline">Score: <span id="scorevalue">0</span></a>
+                <div id="hearts">
+                    
+                </div>
+            </div>
+
+            <div class="fruitContainer">
+                <img id="fruit1" class="fruit">
+
+                <div id="gameOver"></div>
+
+                <audio id="sliceSound">
+                    <source src="slice.mp3"> 
+                    <source src="cry.mp3">
+                </audio>
+
+            </div>
+            <div id="control">
+                <button class="ui-btn ui-btn-inline btn" id="start">START</button>
+                <button class="ui-btn ui-btn-inline" id="catch">Catch Fruit</button>
+            </div>
+        </div>
+
+        <!-- Footer  -->
+        <div data-role="footer" data-position="fixed">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="" data-icon="home" class="ui-btn-active ui-state-persist">HOME</a></li>
+                        <li><a href="" data-icon="info">ABOUT</a></li>
+                        <li><a href="" data-icon="mail">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="fruit.js"></script>
+</body>
+</html>
