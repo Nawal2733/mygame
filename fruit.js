@@ -60,7 +60,7 @@ function addHeart(){
 function startAction() {
     $('#fruit1').show();
     chooseFruit();
-    $('#fruit1').css({'left' : Math.round(300*Math.random(0)) , 'top' : -60});
+    $('#fruit1').css({'left' : Math.round(200*Math.random(0)) , 'top' : -60});
     step = 1 + Math.round(2*Math.random());
     action = setInterval(function(){
         $('#fruit1').css('top' , $('#fruit1').position().top + step);
@@ -70,7 +70,7 @@ function startAction() {
             if(heartsLeft > 1){
                 $('#fruit1').show();
                 chooseFruit();
-                $('#fruit1').css({'left' : Math.round(300*Math.random(0)) , 'top' : -60});
+                $('#fruit1').css({'left' : Math.round(200*Math.random(0)) , 'top' : -60});
                 step = 1 + Math.round(5*Math.random());
                 heartsLeft--;
                 addHeart();
