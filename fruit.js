@@ -61,7 +61,7 @@ function startAction() {
     $('#fruit1').show();
     chooseFruit();
     $('#fruit1').css({'left' : Math.round(200*Math.random(0)) , 'top' : -60});
-    step = 1 + Math.round(4*Math.random());
+    step = 1 + Math.round(3*Math.random());
     action = setInterval(function(){
         $('#fruit1').css('top' , $('#fruit1').position().top + step);
 
